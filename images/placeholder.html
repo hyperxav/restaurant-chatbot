@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Chimères Logo Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        
+        .logo-container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            border: 3px solid #2d4b56;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo::before,
+        .logo::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 3px solid #2d4b56;
+            border-radius: 50% 0;
+        }
+        
+        .logo::before {
+            top: -15px;
+            left: -15px;
+            border-right: none;
+            border-bottom: none;
+            transform: rotate(45deg);
+        }
+        
+        .logo::after {
+            bottom: -15px;
+            right: -15px;
+            border-left: none;
+            border-top: none;
+            transform: rotate(45deg);
+        }
+        
+        .restaurant-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #bd9756;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        
+        .subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: #2d4b56;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .note {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo">
+            <h1 class="restaurant-name">Les Chimères</h1>
+            <p class="subtitle">Restaurant & Bar</p>
+        </div>
+        <p class="note">This is a placeholder logo for the Les Chimères restaurant landing page.<br>Replace this with your actual logo image.</p>
+    </div>
+</body>
+</html> 

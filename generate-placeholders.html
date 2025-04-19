@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Chimères Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #bd9756;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-header {
+            background-color: #2d4b56;
+            color: white;
+            padding: 10px 15px;
+        }
+        
+        .card-body {
+            padding: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #bd9756;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background-color: #a3834b;
+        }
+        
+        .instructions {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .instructions code {
+            background-color: #eee;
+            padding: 3px 5px;
+            border-radius: 3px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Les Chimères Image Generator</h1>
+    
+    <div class="instructions">
+        <h2>How to use this tool:</h2>
+        <ol>
+            <li>Click on each "Open Generator" button below to open the image generator in a new tab</li>
+            <li>Take a screenshot of each generated image (or use your browser's save functionality)</li>
+            <li>Save the images to the <code>images</code> folder with the appropriate filenames</li>
+            <li>Use these images as placeholders in your restaurant landing page</li>
+        </ol>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3>Logo Generator</h3>
+            </div>
+            <div class="card-body">
+                <p>Creates a stylized logo for Les Chimères restaurant.</p>
+                <p>Save as: <code>logo.png</code> and <code>logo-small.png</code></p>
+                <a href="images/placeholder.html" target="_blank" class="btn">Open Generator</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>QR Code Generator</h3>
+            </div>
+            <div class="card-body">
+                <p>Creates a mock QR code for scanning the restaurant menu.</p>
+                <p>Save as: <code>qr-code.png</code></p>
+                <a href="images/qr-placeholder.html" target="_blank" class="btn">Open Generator</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Interior Image Generator</h3>
+            </div>
+            <div class="card-body">
+                <p>Creates a stylized view of the restaurant interior.</p>
+                <p>Save as: <code>restaurant-interior.jpg</code></p>
+                <a href="images/interior-placeholder.html" target="_blank" class="btn">Open Generator</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Map Generator</h3>
+            </div>
+            <div class="card-body">
+                <p>Creates a simple map showing the restaurant location.</p>
+                <p>Save as: <code>map-placeholder.jpg</code></p>
+                <a href="images/map-placeholder.html" target="_blank" class="btn">Open Generator</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Hero Background</h3>
+            </div>
+            <div class="card-body">
+                <p>You'll need a hero background image for the top section.</p>
+                <p>Find a high-quality food or restaurant image and save it as <code>hero-bg.jpg</code></p>
+            </div>
+        </div>
+    </div>
+    
+    <div style="margin-top: 40px; text-align: center;">
+        <p>After generating all images, you can view your restaurant landing page by opening <code>index.html</code> in a web browser.</p>
+    </div>
+</body>
+</html> 

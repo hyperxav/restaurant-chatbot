@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        
+        .qr-container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .qr-row {
+            display: flex;
+            height: 20px;
+        }
+        
+        .qr-cell {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .qr-cell.black {
+            background-color: black;
+        }
+        
+        .qr-corner {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 10px solid black;
+            background-color: white;
+        }
+        
+        .qr-corner.top-left {
+            top: 10px;
+            left: 10px;
+        }
+        
+        .qr-corner.top-right {
+            top: 10px;
+            right: 10px;
+        }
+        
+        .qr-corner.bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+        
+        .qr-center {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .qr-label {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin-top: 15px;
+            color: #333;
+        }
+        
+        .note {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-container">
+        <div class="qr-code">
+            <div class="qr-corner top-left"></div>
+            <div class="qr-corner top-right"></div>
+            <div class="qr-corner bottom-left"></div>
+            <div class="qr-center"></div>
+            <!-- Add random pattern cells for QR code effect -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const qrCode = document.querySelector('.qr-code');
+                    
+                    for (let i = 0; i < 10; i++) {
+                        const row = document.createElement('div');
+                        row.className = 'qr-row';
+                        
+                        for (let j = 0; j < 10; j++) {
+                            const cell = document.createElement('div');
+                            cell.className = 'qr-cell';
+                            
+                            // Randomly make some cells black (40% chance)
+                            if (Math.random() < 0.4) {
+                                cell.classList.add('black');
+                            }
+                            
+                            row.appendChild(cell);
+                        }
+                        
+                        qrCode.appendChild(row);
+                    }
+                });
+            </script>
+        </div>
+        <p class="qr-label">Scan for menu</p>
+        <p class="note">This is a placeholder QR code.<br>Replace this with your actual QR code image.</p>
+    </div>
+</body>
+</html> 

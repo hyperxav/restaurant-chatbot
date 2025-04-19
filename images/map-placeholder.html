@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Map Placeholder</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-image {
+            width: 600px;
+            height: 400px;
+            background-color: #e8e8e8;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        
+        .road {
+            position: absolute;
+            background-color: #c2c2c2;
+        }
+        
+        .road.horizontal {
+            height: 30px;
+            left: 0;
+            right: 0;
+        }
+        
+        .road.vertical {
+            width: 30px;
+            top: 0;
+            bottom: 0;
+        }
+        
+        .road-marking {
+            position: absolute;
+            background-color: white;
+        }
+        
+        .road-marking.horizontal {
+            height: 3px;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .road-marking.vertical {
+            width: 3px;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .building {
+            position: absolute;
+            background-color: #a0a0a0;
+            border-radius: 3px;
+        }
+        
+        .restaurant {
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            background-color: #bd9756;
+            border-radius: 3px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .restaurant-marker {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 36px;
+            background-color: #d4af37;
+            border-radius: 50% 50% 0 50%;
+            transform: translateX(-50%) rotate(45deg);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .restaurant-marker::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border-radius: 50%;
+            top: 6px;
+            left: 6px;
+        }
+        
+        .park {
+            position: absolute;
+            background-color: #a8d5a8;
+            border-radius: 50%;
+        }
+        
+        .water {
+            position: absolute;
+            background-color: #a8c8e0;
+            border-radius: 10px;
+        }
+        
+        .landmark {
+            position: absolute;
+            background-color: #d0d0d0;
+            border-radius: 3px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .note {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="map-image">
+            <!-- Roads -->
+            <div class="road horizontal" style="top: 100px;">
+                <div class="road-marking horizontal"></div>
+            </div>
+            <div class="road horizontal" style="top: 250px;">
+                <div class="road-marking horizontal"></div>
+            </div>
+            <div class="road vertical" style="left: 200px;">
+                <div class="road-marking vertical"></div>
+            </div>
+            <div class="road vertical" style="left: 400px;">
+                <div class="road-marking vertical"></div>
+            </div>
+            
+            <!-- Buildings -->
+            <div class="building" style="top: 130px; left: 50px; width: 100px; height: 70px;"></div>
+            <div class="building" style="top: 130px; left: 250px; width: 120px; height: 90px;"></div>
+            <div class="building" style="top: 280px; left: 50px; width: 100px; height: 70px;"></div>
+            <div class="building" style="top: 280px; left: 450px; width: 100px; height: 70px;"></div>
+            <div class="building" style="top: 30px; left: 450px; width: 80px; height: 60px;"></div>
+            
+            <!-- Restaurant -->
+            <div class="restaurant" style="top: 165px; left: 360px;">
+                <div class="restaurant-marker"></div>
+            </div>
+            
+            <!-- Parks -->
+            <div class="park" style="top: 20px; left: 30px; width: 120px; height: 70px;"></div>
+            <div class="park" style="top: 280px; left: 230px; width: 140px; height: 90px;"></div>
+            
+            <!-- Water -->
+            <div class="water" style="top: 20px; left: 230px; width: 140px; height: 70px;"></div>
+            
+            <!-- Landmarks -->
+            <div class="landmark" style="top: 50px; left: 80px; width: 30px; height: 30px;">PARK</div>
+            <div class="landmark" style="top: 50px; left: 290px; width: 30px; height: 30px;">LAKE</div>
+            <div class="landmark" style="top: 310px; left: 290px; width: 30px; height: 30px;">PARK</div>
+            <div class="landmark" style="top: 180px; left: 400px; width: 30px; height: 30px;">HERE</div>
+        </div>
+        <p class="note">This is a placeholder for the restaurant location map.<br>Replace this with an actual map showing your restaurant's location.</p>
+    </div>
+</body>
+</html> 
